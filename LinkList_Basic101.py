@@ -33,6 +33,24 @@ class LinkList:
         new_node.next = prev_node.next
         prev_node.next = new_node
 
+    # def insertNodeAtPosition(head, data, position):
+    # prev_node = head
+    # if position == 0:
+    #     new_node = SinglyLinkedListNode(data)
+    #     new_node.next = head
+    #     return new_node
+
+    # while prev_node is not None:
+    #     new_node = SinglyLinkedListNode(data)
+
+    #     for _ in range(position-1):
+    #         prev_node = prev_node.next
+
+    #     new_node.next = prev_node.next
+    #     prev_node.next = new_node
+
+    #     return head 
+
     def appen(self, new_data):
         new_node = node(new_data)
         if self.head is None:
@@ -41,7 +59,7 @@ class LinkList:
         last = self.head
         while(last.next):
             last = last.next
-        last.next = new_data
+        last.next = new_node
 
     # def insertNodeAtTail(head, data):
     # new_node = SinglyLinkedListNode(data)
@@ -54,6 +72,26 @@ class LinkList:
     #     current.next = new_node
     # return head    
 
+    def deleteNode(self, key):  
+        temp = self.head  
+        if (temp is not None):  
+            if (temp.data == key):  
+                self.head = temp.next
+                temp = None
+                return
+        
+        while(temp is not None):  
+            if temp.data == key:  
+                break
+            prev = temp  
+            temp = temp.next
+  
+        if(temp == None):  
+            return
+  
+        prev.next = temp.next 
+        temp = None
+
 if __name__ == '__main__':
     abc = LinkList()
     abc.head = node(1)
@@ -61,8 +99,8 @@ if __name__ == '__main__':
     third = node(50)
     abc.head.next = sec
     sec.next = third
-    obj1 = node(4000)
     abc.push(555)
     abc.insert_after(sec,40)
-    abc.appen(obj1)
+    abc.appen(4000)
+    abc.deleteNode(50)
     abc.printLL()
