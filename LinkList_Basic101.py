@@ -92,6 +92,18 @@ class LinkList:
         prev.next = temp.next 
         temp = None
 
+    def deleteNode(self, node):
+        """
+        :type node: ListNode
+        :rtype: void Do not return anything, modify node in-place instead.
+        """
+        current_node = node.next
+        node.val = current_node.val
+        node.next = current_node.next
+        del current_node
+        
+        return
+
 if __name__ == '__main__':
     abc = LinkList()
     abc.head = node(1)
@@ -102,5 +114,5 @@ if __name__ == '__main__':
     abc.push(555)
     abc.insert_after(sec,40)
     abc.appen(4000)
-    abc.deleteNode(50)
+    #abc.deleteNode(50)
     abc.printLL()
