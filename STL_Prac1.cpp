@@ -127,6 +127,9 @@ class vec_ele_access
     }
 };
 
+
+
+
 int main()
 {
     cout<<"STL array operation:"<<endl;
@@ -148,11 +151,12 @@ int main()
     vector<int> global_vector;
     for (auto m = 0; m <= 10; m++)
     {
-        global_vector.push_back(m * 100);
+        global_vector.push_back(m);
     }
     vec_ele_access ele_acc;
     ele_acc.vec_ele_acc(global_vector);
 
     
+
     return 0;
 }
