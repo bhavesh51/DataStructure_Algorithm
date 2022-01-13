@@ -38,15 +38,13 @@ class my_vec
         {
             v1.push_back(i);
         }
-        
         for (int j = 0; j < v1.size(); j++)
         {
             printf("%d\n",j);
         }
         cout<<"Size of vector : "<<v1.size()<<endl;
         return 0;
-    } 
-   
+    }
 };
 
 class vec_operation
@@ -65,17 +63,17 @@ class vec_operation
         {
             cout<<*i<<endl;
         }
-        
+
         cout<<"output from cbegin and cend"<<endl;
         for (auto i = g1.cbegin(); i != g1.cend(); ++i)
         {
             cout<<*i<<endl;
-        }  
+        }
     }
 };
 
 class vec_inbuild_fun
-{   
+{
     public:
     void vector_inbuild_function()
     {
