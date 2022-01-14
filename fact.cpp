@@ -21,6 +21,8 @@ class Solution
         cout << "Factorial of given number is \n";
         for (int i=res_size-1; i>=0; i--)
             cout << res[i];
+        
+        return 0;
     }
 
     public:

@@ -11,7 +11,7 @@ int main()
     int arr_size;
     cout<<"enter size of an array:"<<endl;
     cin>>arr_size;
-    int arr[arr_size];
+    int arr[arr_size]; //arr[user like 15] //arr[10]
     cout<<"enter elements in array:"<<endl;
     for (int i = 0; i < arr_size; i++)
     {
